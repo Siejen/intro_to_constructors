@@ -14,7 +14,8 @@ describe("Automobile tests", function () {
 
     it("should have a start() method defined on Automobile.prototype", function () {
         var auto = new Automobile("Ford", "Mustang", 1999, "Black");
-        expect(auto.getIsStarted()).to.equal(false);
+        var testValue = auto.getIsStarted();
+        expect(testValue).to.equal(false);
         expect(auto.start).to.exist;
         auto.start();
         expect(auto.getIsStarted()).to.equal(true);
